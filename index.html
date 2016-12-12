@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- https://github.com/zlaxy/dubtechradiopage -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!--
+         88             88                                      88
+         88             88           ,d                         88
+         88             88           88                         88
+ ,adPPYb,88 88       88 88,dPPYba, MM88MMM ,adPPYba,  ,adPPYba, 88,dPPYba,
+a8"    `Y88 88       88 88P'    "8a  88   a8P_____88 a8"     "" 88P'    "8a
+8b       88 88       88 88       d8  88   8PP""""""" 8b         88       88
+"8a,   ,d88 "8a,   ,a88 88b,   ,a8"  88,  "8b,   ,aa "8a,   ,aa 88       88
+ `"8bbdP"Y8  `"YbbdP'Y8 8Y"Ybbd8"'   "Y888 `"Ybbd8"'  `"Ybbd8"' 88       88
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Ubuntu:regular&amp;subset=Latin,Cyrillic">
+    <link rel="stylesheet" type="text/css" href="anthrstlsht.css">
+    <title>dub tech</title>
+    <style type="text/css">
+	.container { display: table; height: 100vh; }
+	.tabb { display: table-cell; vertical-align: middle; }
+	body { background-color: #888; background: url(bk.jpg) repeat-y; }
+    </style>
+	<!-- script by bodqhrohro -->
+    <script type="text/javascript">
+	function allID () {
+	var xhr = new XMLHttpRequest();
+	    xhr.open('GET', 'id.php');
+	    xhr.send(null);
+	    xhr.onreadystatechange = function() {
+		if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+		    xhr.responseText.split('\n').forEach(function(line) {
+			var kvID = line.split(':;:');
+			document.getElementById("first").innerHTML = kvID[1];
+			document.getElementById("second").innerHTML = kvID[2];
+			document.getElementById("third").innerHTML = kvID[3];
+			document.getElementById("fourth").innerHTML = kvID[4];
+			document.getElementById("fifth").innerHTML = kvID[5];
+		    })
+		}
+	    }
+	}
+      allID();
+      setInterval(allID, 1e4);
+    </script>
+  </head>
+  <body>
+    <div class="container">
+    <table class="tabb">
+      <tr><td>
+	<h5 align="right"><b><a href="http://anima.sknt.ru">Anima Amoris [Dub Techno]</a><br>
+	<a href="http://amoris.sknt.ru:8000">http://93.100.61.75:8000</a></b></h5>
+	</td><td><audio controls preload="none"><source src="http://amoris.sknt.ru:8000/;" type="audio/mpeg"></audio></td><td>
+	<h6 id="first"></h6>
+      </td></tr><tr><td>
+	<h5 align="right"><b><a href="http://sursumcorda.ning.com">arctic dub (sursumcorda)</a><br>
+	<a href="http://67.212.165.106:8144">http://67.212.165.106:8144</a></b></h5>
+	</td><td><audio controls preload="none"><source src="http://67.212.165.106:8144/;" type="audio/mpeg"></audio></td><td>
+	<h6 id="second"></h6>
+      </td></tr><tr><td>
+	<h5 align="right"><b><a href="http://dubtechno.com.br">Dub Techno Station</a><br>
+	<a href="http://173.236.30.162:8022">http://173.236.30.162:8022</a></b></h5>
+	</td><td><audio controls preload="none"><source src="http://173.236.30.162:8022/stream" type="audio/mpeg"></audio></td><td>
+	<h6 id="third"></h6>
+      </td></tr><tr><td>
+	<h5 align="right"><b><a href="http://electronicmusic.fm">electronicmusic.fm - Dub</a><br>
+	<a href="http://91.237.213.34:8008">http://91.237.213.34:8008</a></b></h5>
+	</td><td><audio controls preload="none"><source src="http://91.237.213.34:8008/;" type="audio/mpeg"></audio></td><td>
+	<h6 id="fourth"></h6>
+      </td></tr><tr><td>
+	<h5 align="right"><b><a href="http://radcap.ru">Radio Caprice - Dub Techno</a><br>
+	<a href="http://79.120.39.202:9009">http://79.120.39.202:9009</a></b></h5>
+	</td><td><audio controls preload="none"><source src="http://79.120.39.202:9009/;" type="audio/mpeg"></audio></td><td>
+	<h6 id="fifth"></h6>
+      </td></tr>
+    </table></div>
+    <!--
+                             88                   88             88
+  ,d                         88                   88             88
+  88                         88                   88             88
+MM88MMM ,adPPYba,  ,adPPYba, 88,dPPYba,   ,adPPYb,88 88       88 88,dPPYba,
+  88   a8P_____88 a8"     "" 88P'    "8a a8"    `Y88 88       88 88P'    "8a
+  88   8PP""""""" 8b         88       88 8b       88 88       88 88       d8
+  88,  "8b,   ,aa "8a,   ,aa 88       88 "8a,   ,d88 "8a,   ,a88 88b,   ,a8"
+  "Y888 `"Ybbd8"'  `"Ybbd8"' 88       88  `"8bbdP"Y8  `"YbbdP'Y8 8Y"Ybbd8"'
+    -->
+  </body>
+</html>
