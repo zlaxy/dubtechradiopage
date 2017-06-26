@@ -48,9 +48,9 @@ h5 {
 
 h6 {
   font-size: 1.2rem;
-  -moz-text-shadow: 0 0 10px #00afee;
-  -webkit-text-shadow: 0 0 10px #00afee;
-  text-shadow: 0 0 10px #00afee;
+  -moz-text-shadow: 0 0 10px #fff;
+  -webkit-text-shadow: 0 0 10px #fff;
+  text-shadow: 0 0 10px #fff;
 }
 
 hr {
