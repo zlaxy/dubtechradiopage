@@ -7,17 +7,42 @@ function getID($radioip,$radioport,$postfix = "GET /7.html HTTP/1.1\nUser-Agent:
   {
     $open = fsockopen($radioip,$radioport,$errno,$errstr,'.5');
     if ($open) {
-	fputs($open,$postfix);
-	stream_set_timeout($open,'1');
-	$read = fread($open,255);
-	$exploded = explode(",",$read);
-	if($exploded[6] == '' || $exploded[6] == '</body></html>')
-	{ $text = 'streaming'; } else { $text = $exploded[6]; }
-	$id = str_replace("</body></html>","",$text);
+    fputs($open,$postfix);
+    stream_set_timeout($open,'1');
+    $read = fread($open,255);
+    $exploded = explode(",",$read);
+    if($exploded[6] == '' || $exploded[6] == '</body></html>')
+    { $text = 'streaming'; } else { $text = $exploded[6]; }
+    $id = str_replace("</body></html>","",$text);
     } else { return false; }
-	fclose($open);
-	return $id;
+    fclose($open);
+    return $id;
   }
+
+  $radioip = "93.100.61.75";
+  $radioport = "8000";
+    echo getID($radioip,$radioport);
+    echo ":;:";
+  $radioip = "67.212.165.106";
+  $radioport = "8144";
+    echo getID($radioip,$radioport);
+    echo ":;:";
+  $radioip = "93.100.61.75";
+  $radioport = "8024";
+    echo getID($radioip,$radioport);
+    echo ":;:";
+// // outdated:
+//  $radioip = "173.236.30.162";
+//  $radioport = "8022";
+//    echo getID($radioip,$radioport);
+// // outdated:
+//  $radioip = "91.237.213.34";
+//  $radioport = "8008";
+//    echo getID($radioip,$radioport).":;:";
+  $radioip = "79.120.39.202";
+  $radioport = "9009";
+    echo getID($radioip,$radioport);
+    echo ":;:";
 
 // Icecast
 // https://stackoverflow.com/a/17109654
@@ -58,29 +83,17 @@ function getMp3StreamTitle($streamingUrl, $interval, $offset = 0, $headers = tru
             throw new Exception("Unable to open stream [{$streamingUrl}]");
     }
 
-  $radioip = "93.100.61.75";
-  $radioport = "8000";
-    echo getID($radioip,$radioport).":;:";
-  $radioip = "67.212.165.106";
-  $radioport = "8144";
-    echo getID($radioip,$radioport).":;:";
-  $radioip = "173.236.30.162";
-  $radioport = "8022";
-    echo getID($radioip,$radioport).":;:";
-// // outdated:
-//  $radioip = "91.237.213.34";
-//  $radioport = "8008";
-//    echo getID($radioip,$radioport).":;:";
-  $radioip = "79.120.39.202";
-  $radioport = "9009";
-    echo getID($radioip,$radioport).":;:";
+    echo getMp3StreamTitle('http://audio-online.net:8015/live', 19200);
+    echo ":;:";
 
-  echo getMp3StreamTitle('http://audio-online.net:8015/live', 19200).":;:";
-  echo getMp3StreamTitle('http://prem2.di.fm/dubtechno_hi?95f925a23d7093d9f7156fc5', 19200).":;:";
+    $radioip = "sonus.fm";
+    $radioport = "8000";
+    $postfix = "GET /7.html?sid=3 HTTP/1.1\nUser-Agent:Mozilla\n\n";
+    echo getID($radioip,$radioport,$postfix);
+    echo ":;:";
 
-  $radioip = "136.243.16.19";
-  $radioport = "8000";
-  $postfix = "GET /7.html?sid=3 HTTP/1.1\nUser-Agent:Mozilla\n\n";
-    echo getID($radioip,$radioport,$postfix).":;:";
+    echo getMp3StreamTitle('http://pub2.diforfree.org:8000/di_dubtechno_hi', 19200);
+    echo ":;:";
+    echo ":;:";
 
 ?>
