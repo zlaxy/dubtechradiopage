@@ -1,5 +1,5 @@
-dub techno shoutcast streams
+dub techno shoutcast and icecast streams
 
-https://dub.tech.soundragon.su/
+https://dub.tech.soundragon.su
 
-under DWTWL 2.55 license: https://soundragon.su/license/license.html
+under DWTWL 2.55 license
