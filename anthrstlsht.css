@@ -1,11 +1,7 @@
 /**
  * anthrstlsht.css (another style sheet) v0.8
- * DWTWL 2.5 license: https://soundragon.su/license/license.html
+ * DWTWL 2.55 license: https://soundragon.su/license/license.html
  */
-
-html {
-  font-family: sans-serif;
-}
 
 body {
   margin: 0;
@@ -41,16 +37,12 @@ h4 {
 
 h5 {
   font-size: 0.7rem;
-  -moz-text-shadow:0 0 10px #fff;
-  -webkit-text-shadow:0 0 10px #fff;
-  text-shadow:0 0 10px #fff;
+  text-shadow:0 0 5px #fff;
 }
 
 h6 {
   font-size: 1.2rem;
-  -moz-text-shadow: 0 0 10px #fff;
-  -webkit-text-shadow: 0 0 10px #fff;
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 0 0 5px #fff;
 }
 
 hr {
